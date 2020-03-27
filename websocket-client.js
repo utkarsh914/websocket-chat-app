@@ -18,16 +18,17 @@ function displaymessages(msg){
   let a = document.createElement('div')
   a.classList.add("w3-rest")
   let b = document.createElement('p')
-  b.innerHTML = msg
-  // b.classList.add("w3-input")
+  b.innerHTML = msg;
   a.appendChild(b)
   document.querySelector('#messenger').appendChild(a)
+  //scroll to the bottom
+  a.scrollIntoView()
 }
 
 document.getElementById('form0').onsubmit = function (){
   let input = document.getElementById('name').value
   // WS.send(input)
-  username = input+': '
+  username = `<b>${input}: </b>`
   document.getElementById('form0').style.display = 'none'
   document.getElementById('form1').style.display = 'block'
 }

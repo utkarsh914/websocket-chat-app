@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register | FPS_NITS</title>
+	<title>Chat App</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/w3.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -10,7 +10,8 @@
 		.headers, .buttons{background: linear-gradient(to right, #e60000, #003399); color: rgb(240,240,240);}
 		a {text-decoration: none;}
 		#form1 p {margin: 0; padding: 8px;}
-		#message {margin-bottom: 16px;}
+		#message {margin: 16px;}
+		#messenger {margin-top: 0!important;}
 	</style>
 </head>
 <body>
@@ -25,7 +26,7 @@
 		<h2 id="status" class="w3-center">Chat Disconnected!</h2>
 	</div>
 
-	<form action="javascript:void(0)" class="w3-container w3-card-4 w3-light-grey w3-text-indigo w3-margin" id="form0">
+	<form action="javascript:void(0)" class="w3-container w3-card-4 w3-light-grey w3-text-indigo w3-margin" autocomplete="off" id="form0">
 		<h3 class="w3-center">Enter your name:</h3>
 	
 		<div class="w3-row w3-section">
@@ -37,15 +38,16 @@
 	 
 	</form>
 
-	<form action="javascript:void(0)" class="w3-container w3-card-4 w3-light-grey w3-text-indigo w3-margin" id="form1" style="display: none;">
-	
-		<div class="w3-row w3-section" id="messenger">
-			<!-- <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div> -->
-			<div class="w3-rest">
-				<input class="w3-input w3-border" name="message" id="message" type="text" placeholder="type a message" required>
-			</div>
+	<form action="javascript:void(0)" class="w3-container w3-card-4 w3-light-grey w3-text-indigo w3-margin" autocomplete="off" id="form1" style="display: none;">
+		
+		<div class="w3-rest">
+			<input class="w3-input w3-border" name="message" id="message" type="text" placeholder="type a message" required>
 		</div>
-	 
+		
+		<div class="w3-row w3-section w3-text-black" id="messenger" style="max-height: 65vh; overflow: auto;">
+			<!-- <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div> -->
+		</div>
+
 	</form>
 
 </div>
