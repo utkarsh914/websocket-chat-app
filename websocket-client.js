@@ -11,7 +11,6 @@ WS.onclose = ()=>{
 
 WS.onmessage = (payload)=>{
   displaymessages(payload.data)
-  console.log(payload.data)
 }
 
 function displaymessages(msg){
