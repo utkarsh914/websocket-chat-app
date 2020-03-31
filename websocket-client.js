@@ -30,6 +30,11 @@ document.getElementById('form0').onsubmit = function (){
   username = `<b>${input}: </b>`
   document.getElementById('form0').style.display = 'none'
   document.getElementById('form1').style.display = 'block'
+  let x = document.createElement('h3')
+  x.innerHTML = input
+  x.classList.add("w3-text-black")
+  x.classList.add("w3-center")
+  document.getElementById('header').appendChild(x)
 }
 
 document.getElementById('form1').onsubmit = function (){
